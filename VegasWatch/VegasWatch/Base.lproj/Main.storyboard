@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VegasWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-5a-uxs">
+                                <rect key="frame" x="20" y="151" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="151" width="360" height="28"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="130" width="360" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="151" width="760" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AppleID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0d-n7-nDj">
+                                <rect key="frame" x="20" y="65" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="65" width="560" height="30"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="65" width="360" height="0.0"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="65" width="360" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="65" width="760" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-eq-aAR">
+                                <rect key="frame" x="20" y="122" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="109" width="560" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="122" width="360" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="101" width="360" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="104" width="760" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-st-APv">
+                                <rect key="frame" x="20" y="211" width="79" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="170" width="79" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uU3-L5-Jie"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="AppleId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEs-4L-Wxx">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="360" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="360" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="760" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1eg-L7-r80"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="top" secondItem="0gs-eq-aAR" secondAttribute="bottom" constant="60" id="785-lh-G9t"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Uo-Xb-igx"/>
+                            <constraint firstItem="sUu-st-APv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8BY-aO-vZH"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8us-F2-mSU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0gs-eq-aAR" secondAttribute="trailing" id="9e8-kV-n8e"/>
+                            <constraint firstItem="uEs-4L-Wxx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CES-Mx-lA1"/>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FsV-QA-FDa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sUu-st-APv" secondAttribute="trailing" id="I2x-r4-Lig"/>
+                            <constraint firstItem="uEs-4L-Wxx" firstAttribute="top" secondItem="Mej-5a-uxs" secondAttribute="bottom" constant="60" id="NfX-hp-pgB"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OEs-IT-wcL"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OJ9-Ob-Vo5"/>
+                            <constraint firstItem="sUu-st-APv" firstAttribute="top" secondItem="K0d-n7-nDj" secondAttribute="bottom" constant="100" id="Rlv-3f-NsE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sUu-st-APv" secondAttribute="bottom" constant="100" id="SGd-ws-dOg"/>
+                            <constraint firstItem="sUu-st-APv" firstAttribute="top" secondItem="K0d-n7-nDj" secondAttribute="bottom" constant="60" id="V8C-Kh-Cix"/>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="top" secondItem="uEs-4L-Wxx" secondAttribute="bottom" constant="100" id="VBz-nn-c47"/>
+                            <constraint firstItem="0gs-eq-aAR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="fm2-cp-fah"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEs-4L-Wxx" secondAttribute="trailing" id="kp7-SO-oEe"/>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ld9-cQ-hLn"/>
+                            <constraint firstItem="uEs-4L-Wxx" firstAttribute="top" secondItem="Mej-5a-uxs" secondAttribute="bottom" constant="100" id="nQd-sE-SfQ"/>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="q5K-df-N6q"/>
+                            <constraint firstItem="0gs-eq-aAR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s1f-yl-vYf"/>
+                            <constraint firstItem="0gs-eq-aAR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vKt-xa-cBT"/>
+                            <constraint firstItem="Mej-5a-uxs" firstAttribute="top" secondItem="0gs-eq-aAR" secondAttribute="bottom" constant="100" id="vV9-n9-ftl"/>
+                            <constraint firstItem="K0d-n7-nDj" firstAttribute="top" secondItem="uEs-4L-Wxx" secondAttribute="bottom" constant="60" id="zpW-nq-gS8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idLabel" destination="uEs-4L-Wxx" id="OfR-w2-Dex"/>
+                        <outlet property="idText" destination="K0d-n7-nDj" id="rj4-zb-fAT"/>
+                        <outlet property="usernameLabel" destination="0gs-eq-aAR" id="esO-2D-hI0"/>
+                        <outlet property="usernameText" destination="Mej-5a-uxs" id="URy-0L-cAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="498"/>
+        </scene>
+    </scenes>
+</document>

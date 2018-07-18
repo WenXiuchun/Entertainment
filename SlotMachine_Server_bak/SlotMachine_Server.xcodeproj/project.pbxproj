@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC7882AF1D5A1E0F00B7EA5C /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882911D5A1E0F00B7EA5C /* AggregateFunctions.swift */; };
+		AC7882B01D5A1E0F00B7EA5C /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882921D5A1E0F00B7EA5C /* Blob.swift */; };
+		AC7882B11D5A1E0F00B7EA5C /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882931D5A1E0F00B7EA5C /* Collation.swift */; };
+		AC7882B31D5A1E0F00B7EA5C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882951D5A1E0F00B7EA5C /* Connection.swift */; };
+		AC7882B41D5A1E0F00B7EA5C /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882961D5A1E0F00B7EA5C /* CoreFunctions.swift */; };
+		AC7882B51D5A1E0F00B7EA5C /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882971D5A1E0F00B7EA5C /* CustomFunctions.swift */; };
+		AC7882B61D5A1E0F00B7EA5C /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882981D5A1E0F00B7EA5C /* Expression.swift */; };
+		AC7882B71D5A1E0F00B7EA5C /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882991D5A1E0F00B7EA5C /* Foundation.swift */; };
+		AC7882B81D5A1E0F00B7EA5C /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78829B1D5A1E0F00B7EA5C /* FTS4.swift */; };
+		AC7882B91D5A1E0F00B7EA5C /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78829C1D5A1E0F00B7EA5C /* FTS5.swift */; };
+		AC7882BA1D5A1E0F00B7EA5C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78829D1D5A1E0F00B7EA5C /* Helpers.swift */; };
+		AC7882BB1D5A1E0F00B7EA5C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78829F1D5A1E0F00B7EA5C /* main.swift */; };
+		AC7882BC1D5A1E0F00B7EA5C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A01D5A1E0F00B7EA5C /* Message.swift */; };
+		AC7882BD1D5A1E0F00B7EA5C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A11D5A1E0F00B7EA5C /* Operators.swift */; };
+		AC7882BE1D5A1E0F00B7EA5C /* PubSubRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A21D5A1E0F00B7EA5C /* PubSubRest.swift */; };
+		AC7882BF1D5A1E0F00B7EA5C /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A31D5A1E0F00B7EA5C /* Query.swift */; };
+		AC7882C01D5A1E0F00B7EA5C /* R*Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A41D5A1E0F00B7EA5C /* R*Tree.swift */; };
+		AC7882C11D5A1E0F00B7EA5C /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A51D5A1E0F00B7EA5C /* Schema.swift */; };
+		AC7882C21D5A1E0F00B7EA5C /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A61D5A1E0F00B7EA5C /* Setter.swift */; };
+		AC7882C31D5A1E0F00B7EA5C /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7882A91D5A1E0F00B7EA5C /* SQLite-Bridging.m */; };
+		AC7882C41D5A1E0F00B7EA5C /* Sqliteconnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882AB1D5A1E0F00B7EA5C /* Sqliteconnector.swift */; };
+		AC7882C51D5A1E0F00B7EA5C /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882AC1D5A1E0F00B7EA5C /* Statement.swift */; };
+		AC7882C61D5A1E0F00B7EA5C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882AD1D5A1E0F00B7EA5C /* SwiftyJSON.swift */; };
+		AC7882C71D5A1E0F00B7EA5C /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7882AE1D5A1E0F00B7EA5C /* Value.swift */; };
+		AC78859F1D4653340012B614 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC78859E1D4653340012B614 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC7885761D464B260012B614 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AC7882911D5A1E0F00B7EA5C /* AggregateFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = SlotMachine_Server/AggregateFunctions.swift; sourceTree = SOURCE_ROOT; };
+		AC7882921D5A1E0F00B7EA5C /* Blob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = SlotMachine_Server/Blob.swift; sourceTree = SOURCE_ROOT; };
+		AC7882931D5A1E0F00B7EA5C /* Collation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = SlotMachine_Server/Collation.swift; sourceTree = SOURCE_ROOT; };
+		AC7882951D5A1E0F00B7EA5C /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = SlotMachine_Server/Connection.swift; sourceTree = SOURCE_ROOT; };
+		AC7882961D5A1E0F00B7EA5C /* CoreFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = SlotMachine_Server/CoreFunctions.swift; sourceTree = SOURCE_ROOT; };
+		AC7882971D5A1E0F00B7EA5C /* CustomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = SlotMachine_Server/CustomFunctions.swift; sourceTree = SOURCE_ROOT; };
+		AC7882981D5A1E0F00B7EA5C /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = SlotMachine_Server/Expression.swift; sourceTree = SOURCE_ROOT; };
+		AC7882991D5A1E0F00B7EA5C /* Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = SlotMachine_Server/Foundation.swift; sourceTree = SOURCE_ROOT; };
+		AC78829A1D5A1E0F00B7EA5C /* fts3_tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = SlotMachine_Server/fts3_tokenizer.h; sourceTree = SOURCE_ROOT; };
+		AC78829B1D5A1E0F00B7EA5C /* FTS4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = SlotMachine_Server/FTS4.swift; sourceTree = SOURCE_ROOT; };
+		AC78829C1D5A1E0F00B7EA5C /* FTS5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = SlotMachine_Server/FTS5.swift; sourceTree = SOURCE_ROOT; };
+		AC78829D1D5A1E0F00B7EA5C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = SlotMachine_Server/Helpers.swift; sourceTree = SOURCE_ROOT; };
+		AC78829E1D5A1E0F00B7EA5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SlotMachine_Server/Info.plist; sourceTree = SOURCE_ROOT; };
+		AC78829F1D5A1E0F00B7EA5C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = SlotMachine_Server/main.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A01D5A1E0F00B7EA5C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = SlotMachine_Server/Message.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A11D5A1E0F00B7EA5C /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SlotMachine_Server/Operators.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A21D5A1E0F00B7EA5C /* PubSubRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PubSubRest.swift; path = SlotMachine_Server/PubSubRest.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A31D5A1E0F00B7EA5C /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SlotMachine_Server/Query.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A41D5A1E0F00B7EA5C /* R*Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "R*Tree.swift"; path = "SlotMachine_Server/R*Tree.swift"; sourceTree = SOURCE_ROOT; };
+		AC7882A51D5A1E0F00B7EA5C /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = SlotMachine_Server/Schema.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A61D5A1E0F00B7EA5C /* Setter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = SlotMachine_Server/Setter.swift; sourceTree = SOURCE_ROOT; };
+		AC7882A71D5A1E0F00B7EA5C /* SlotMachine_Server-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SlotMachine_Server-Bridging-Header.h"; path = "SlotMachine_Server/SlotMachine_Server-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		AC7882A81D5A1E0F00B7EA5C /* SQLite-Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "SlotMachine_Server/SQLite-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		AC7882A91D5A1E0F00B7EA5C /* SQLite-Bridging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "SlotMachine_Server/SQLite-Bridging.m"; sourceTree = SOURCE_ROOT; };
+		AC7882AA1D5A1E0F00B7EA5C /* SQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = SlotMachine_Server/SQLite.h; sourceTree = SOURCE_ROOT; };
+		AC7882AB1D5A1E0F00B7EA5C /* Sqliteconnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sqliteconnector.swift; path = SlotMachine_Server/Sqliteconnector.swift; sourceTree = SOURCE_ROOT; };
+		AC7882AC1D5A1E0F00B7EA5C /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = SlotMachine_Server/Statement.swift; sourceTree = SOURCE_ROOT; };
+		AC7882AD1D5A1E0F00B7EA5C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SlotMachine_Server/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
+		AC7882AE1D5A1E0F00B7EA5C /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = SlotMachine_Server/Value.swift; sourceTree = SOURCE_ROOT; };
+		AC7885781D464B260012B614 /* SlotMachine_Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SlotMachine_Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC78859E1D4653340012B614 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC7885751D464B260012B614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC78859F1D4653340012B614 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67E1106B1D61B4BA00F10BA8 /* SQLliteconnector */ = {
+			isa = PBXGroup;
+			children = (
+				AC7882AE1D5A1E0F00B7EA5C /* Value.swift */,
+				AC7882911D5A1E0F00B7EA5C /* AggregateFunctions.swift */,
+				AC7882921D5A1E0F00B7EA5C /* Blob.swift */,
+				AC7882931D5A1E0F00B7EA5C /* Collation.swift */,
+				AC7882951D5A1E0F00B7EA5C /* Connection.swift */,
+				AC7882961D5A1E0F00B7EA5C /* CoreFunctions.swift */,
+				AC7882971D5A1E0F00B7EA5C /* CustomFunctions.swift */,
+				AC7882981D5A1E0F00B7EA5C /* Expression.swift */,
+				AC7882991D5A1E0F00B7EA5C /* Foundation.swift */,
+				AC78829A1D5A1E0F00B7EA5C /* fts3_tokenizer.h */,
+				AC78829B1D5A1E0F00B7EA5C /* FTS4.swift */,
+				AC78829C1D5A1E0F00B7EA5C /* FTS5.swift */,
+				AC78829D1D5A1E0F00B7EA5C /* Helpers.swift */,
+				AC7882A11D5A1E0F00B7EA5C /* Operators.swift */,
+				AC7882A31D5A1E0F00B7EA5C /* Query.swift */,
+				AC7882A41D5A1E0F00B7EA5C /* R*Tree.swift */,
+				AC7882A51D5A1E0F00B7EA5C /* Schema.swift */,
+				AC7882A61D5A1E0F00B7EA5C /* Setter.swift */,
+				AC7882A71D5A1E0F00B7EA5C /* SlotMachine_Server-Bridging-Header.h */,
+				AC7882A81D5A1E0F00B7EA5C /* SQLite-Bridging.h */,
+				AC7882A91D5A1E0F00B7EA5C /* SQLite-Bridging.m */,
+				AC7882AA1D5A1E0F00B7EA5C /* SQLite.h */,
+				AC7882AC1D5A1E0F00B7EA5C /* Statement.swift */,
+			);
+			name = SQLliteconnector;
+			sourceTree = "<group>";
+		};
+		AC78856F1D464B260012B614 = {
+			isa = PBXGroup;
+			children = (
+				AC78859E1D4653340012B614 /* libsqlite3.tbd */,
+				AC78857A1D464B260012B614 /* SlotMachine_Server */,
+				AC7885791D464B260012B614 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC7885791D464B260012B614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC7885781D464B260012B614 /* SlotMachine_Server */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC78857A1D464B260012B614 /* SlotMachine_Server */ = {
+			isa = PBXGroup;
+			children = (
+				67E1106B1D61B4BA00F10BA8 /* SQLliteconnector */,
+				AC7882AB1D5A1E0F00B7EA5C /* Sqliteconnector.swift */,
+				AC7882A01D5A1E0F00B7EA5C /* Message.swift */,
+				AC78829E1D5A1E0F00B7EA5C /* Info.plist */,
+				AC78829F1D5A1E0F00B7EA5C /* main.swift */,
+				AC7882A21D5A1E0F00B7EA5C /* PubSubRest.swift */,
+				AC7882AD1D5A1E0F00B7EA5C /* SwiftyJSON.swift */,
+			);
+			name = SlotMachine_Server;
+			path = "karen-message-service";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC7885771D464B260012B614 /* SlotMachine_Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC78857F1D464B260012B614 /* Build configuration list for PBXNativeTarget "SlotMachine_Server" */;
+			buildPhases = (
+				AC7885741D464B260012B614 /* Sources */,
+				AC7885751D464B260012B614 /* Frameworks */,
+				AC7885761D464B260012B614 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlotMachine_Server;
+			productName = "karen-message-service";
+			productReference = AC7885781D464B260012B614 /* SlotMachine_Server */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC7885701D464B260012B614 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = vegas;
+				TargetAttributes = {
+					AC7885771D464B260012B614 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AC7885731D464B260012B614 /* Build configuration list for PBXProject "SlotMachine_Server" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AC78856F1D464B260012B614;
+			productRefGroup = AC7885791D464B260012B614 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC7885771D464B260012B614 /* SlotMachine_Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC7885741D464B260012B614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7882B71D5A1E0F00B7EA5C /* Foundation.swift in Sources */,
+				AC7882C51D5A1E0F00B7EA5C /* Statement.swift in Sources */,
+				AC7882C01D5A1E0F00B7EA5C /* R*Tree.swift in Sources */,
+				AC7882C61D5A1E0F00B7EA5C /* SwiftyJSON.swift in Sources */,
+				AC7882C21D5A1E0F00B7EA5C /* Setter.swift in Sources */,
+				AC7882BB1D5A1E0F00B7EA5C /* main.swift in Sources */,
+				AC7882B91D5A1E0F00B7EA5C /* FTS5.swift in Sources */,
+				AC7882B41D5A1E0F00B7EA5C /* CoreFunctions.swift in Sources */,
+				AC7882B01D5A1E0F00B7EA5C /* Blob.swift in Sources */,
+				AC7882B61D5A1E0F00B7EA5C /* Expression.swift in Sources */,
+				AC7882B31D5A1E0F00B7EA5C /* Connection.swift in Sources */,
+				AC7882BA1D5A1E0F00B7EA5C /* Helpers.swift in Sources */,
+				AC7882B81D5A1E0F00B7EA5C /* FTS4.swift in Sources */,
+				AC7882BE1D5A1E0F00B7EA5C /* PubSubRest.swift in Sources */,
+				AC7882B11D5A1E0F00B7EA5C /* Collation.swift in Sources */,
+				AC7882C31D5A1E0F00B7EA5C /* SQLite-Bridging.m in Sources */,
+				AC7882BD1D5A1E0F00B7EA5C /* Operators.swift in Sources */,
+				AC7882B51D5A1E0F00B7EA5C /* CustomFunctions.swift in Sources */,
+				AC7882C41D5A1E0F00B7EA5C /* Sqliteconnector.swift in Sources */,
+				AC7882AF1D5A1E0F00B7EA5C /* AggregateFunctions.swift in Sources */,
+				AC7882C11D5A1E0F00B7EA5C /* Schema.swift in Sources */,
+				AC7882C71D5A1E0F00B7EA5C /* Value.swift in Sources */,
+				AC7882BF1D5A1E0F00B7EA5C /* Query.swift in Sources */,
+				AC7882BC1D5A1E0F00B7EA5C /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC78857D1D464B260012B614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "karen-message-service/karen-message-service-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC78857E1D464B260012B614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "karen-message-service/karen-message-service-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AC7885801D464B260012B614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = SlotMachine_Server;
+				SWIFT_OBJC_BRIDGING_HEADER = "SlotMachine_Server/SlotMachine_Server-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC7885811D464B260012B614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = SlotMachine_Server;
+				SWIFT_OBJC_BRIDGING_HEADER = "SlotMachine_Server/SlotMachine_Server-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC7885731D464B260012B614 /* Build configuration list for PBXProject "SlotMachine_Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC78857D1D464B260012B614 /* Debug */,
+				AC78857E1D464B260012B614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC78857F1D464B260012B614 /* Build configuration list for PBXNativeTarget "SlotMachine_Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7885801D464B260012B614 /* Debug */,
+				AC7885811D464B260012B614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC7885701D464B260012B614 /* Project object */;
+}

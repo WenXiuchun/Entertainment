@@ -1,0 +1,39 @@
+#%RAML 0.8
+title: hybris Service Archetype
+baseUri: http://localhost/
+version: v1
+mediaType:  application/json
+
+schemas:
+  - sentence: !include schemas/sentence.json
+
+/chatbot:
+  get:
+    queryParameters:
+      sentence:
+        type: string
+        required: true
+    description: ask the bot something and return the answer
+    responses:
+      200:
+        description: "Return ofs the answer of the chatbot"
+        body:
+          application/json:
+            example: !include examples/answer-example.json
+      400: 
+        description: |
+            Bad or incomplete request.
+  post:
+    description: Returns most probable emotion of an facial expression  
+    body:
+      binary/octet-stream:
+    responses:
+      201:
+        description: "Return of emotion: anger, contempt, disgust, fear, happiness, neutral, sadness or surprise"
+        body:
+          application/json:
+            example: !include examples/emotion-return-example.json
+      400: 
+        description: |
+            Bad or incomplete request.
+

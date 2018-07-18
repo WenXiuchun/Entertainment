@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"SendInfoByCustomerService",
+  "type":"object",
+  "properties":
+  {
+    "image_url":
+    {
+      "type":"string"
+    }
+  }
+}

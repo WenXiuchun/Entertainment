@@ -1,0 +1,22 @@
+%YAML 1.1
+# This file is a Cloud Foundry application manifest.
+# Use it to deploy your SlotMachine_CEC_Server service to a Cloud Foundry environment.
+# To do so with the Cloud Foundry CLI-tool, execute the following command in this directory:
+#
+#     cf push
+#
+# For more information see:
+# http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+---
+applications:
+- name: SlotMachine_CEC_Server_coil2
+  buildpack: java_buildpack
+  instances: 1
+  memory: 1024M
+  host: SlotMachine_CEC_Server_coil2
+  domain: us-east.internal.yaas.io
+  path: target/SlotMachine_CEC_Server.war
+  env:
+    # used in logging format and API Console
+    APP_NAME: SlotMachine_CEC_Server_coil2
+    APP_VERSION: 1.0-SNAPSHOT

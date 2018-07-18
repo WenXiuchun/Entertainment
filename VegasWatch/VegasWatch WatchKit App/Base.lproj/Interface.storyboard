@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="VegasWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="2" alignment="center" text=" " id="SY5-AD-VLd">
+                            <fontDescription key="font" type="system" pointSize="4"/>
+                        </label>
+                        <button alignment="center" backgroundImage="play icons" id="dvx-63-FFp">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.74901960779999999" green="1" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="letsPlay" destination="AgC-eL-Hgc" id="Kh4-uZ-TW9"/>
+                            </connections>
+                        </button>
+                        <label height="17" alignment="center" verticalAlignment="bottom" text="let's play" id="A2v-bm-4ZN">
+                            <color key="textColor" red="0.14099373613444516" green="0.56296598439904633" blue="0.82353478531464941" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="bottom" text=" " id="h9K-Ih-rd6">
+                            <fontDescription key="font" type="system" pointSize="5"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="Heu-u0-YxH">
+                        <items>
+                            <menuItem title="Reset" icon="shuffle" id="iBL-Oc-fZV">
+                                <connections>
+                                    <action selector="resetButton" destination="AgC-eL-Hgc" id="lVy-41-g2T"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="debugLabel" destination="h9K-Ih-rd6" id="kMV-1k-xB5"/>
+                        <outlet property="playButton" destination="dvx-63-FFp" id="NdW-0t-7Bd"/>
+                        <outlet property="resultLabel" destination="A2v-bm-4ZN" id="GRf-hz-YGf"/>
+                        <segue destination="121-gR-hmg" kind="relationship" relationship="nextPage" id="Mz6-9c-EXL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller Details-->
+        <scene sceneID="jEF-l7-fY4">
+            <objects>
+                <controller identifier="Interface Controller Details" id="121-gR-hmg" customClass="InterfaceControllerDetails" customModule="VegasWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Credit: 100" id="58v-TE-ujs"/>
+                        <label alignment="center" verticalAlignment="center" text="Plays: 0" id="F30-al-xRL">
+                            <color key="textColor" red="0.14099373609999999" green="0.56296598440000001" blue="0.82353478530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" alignment="center" verticalAlignment="bottom" id="nEJ-ex-BOT">
+                            <items>
+                                <label width="50.5" height="38.5" alignment="center" verticalAlignment="center" text="Won" textAlignment="center" numberOfLines="2" id="GhW-89-vRx">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <separator height="19.5" alignment="center" verticalAlignment="center" id="x7g-KQ-Xck">
+                                    <color key="color" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label width="48.5" height="39.5" alignment="center" verticalAlignment="center" text="Lost" textAlignment="center" numberOfLines="2" id="rpp-zf-YuS">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="creditLabel" destination="58v-TE-ujs" id="Ogc-46-kfS"/>
+                        <outlet property="lostLabel" destination="rpp-zf-YuS" id="N0z-Uj-fkg"/>
+                        <outlet property="playLabel" destination="F30-al-xRL" id="m94-Ot-qLc"/>
+                        <outlet property="wonLabel" destination="GhW-89-vRx" id="1qK-S9-7di"/>
+                        <segue destination="wKF-U7-Eqf" kind="relationship" relationship="nextPage" id="M7o-ex-eoG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="473" y="345"/>
+        </scene>
+        <!--AboutController-->
+        <scene sceneID="y5p-9v-ilw">
+            <objects>
+                <controller identifier="AboutController" id="wKF-U7-Eqf" customClass="InterfaceControllerAbout" customModule="VegasWatch_WatchKit_Extension">
+                    <items>
+                        <label height="20" alignment="center" verticalAlignment="bottom" text="by CEC InnoLab" id="1TD-ny-m11">
+                            <color key="textColor" red="0.14099373609999999" green="0.56296598440000001" blue="0.82353478530000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <imageView width="77" height="81" alignment="center" verticalAlignment="center" image="about icons" id="mEY-Pl-v02">
+                            <color key="tintColor" red="0.14099373609999999" green="0.56296598440000001" blue="0.82353478530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <separator alignment="center" verticalAlignment="center" id="E0K-Rj-9eo">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <separator alignment="center" verticalAlignment="center" id="3Ja-0T-G6B">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label width="122" height="16" alignment="center" verticalAlignment="bottom" text="Debug" textAlignment="center" numberOfLines="2" id="Ptw-dY-AEH">
+                            <fontDescription key="font" type="system" pointSize="6"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="debugLabel" destination="Ptw-dY-AEH" id="42z-Wy-um0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="721" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="VegasWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

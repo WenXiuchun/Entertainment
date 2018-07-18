@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: emotion
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: i323932
+Implementation-Vendor-Id: com.sap.emotion
+Build-Time: Thu Oct 27 2016 03:10:598 UTC +0000
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://yaas.io/emotion
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: SAP SE
+

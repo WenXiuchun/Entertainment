@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sap.cloud.yaas.service-sdk</groupId>
+		<artifactId>service-sdk-libraries-project</artifactId>
+		<version>4.11.0</version>
+	</parent>
+
+	<artifactId>service-sdk-api-console</artifactId>
+	
+	<properties>
+		<versioneye.projectId>55c20a9c663136004700525b</versioneye.projectId>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sap.cloud.yaas.service-sdk</groupId>
+			<artifactId>service-sdk-raml-rewriter</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.cloud.yaas.service-sdk</groupId>
+			<artifactId>service-sdk-security</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<artifactId>spring-web</artifactId>
+			<groupId>org.springframework</groupId>
+			<version>${spring.version}</version>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
+			<artifactId>jersey-test-framework-provider-grizzly2</artifactId>
+			<version>${jersey.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.cloud.yaas.service-sdk</groupId>
+			<artifactId>service-sdk-logging</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<!--
+						Legacy, Jersey-based API-Console components server static web-resources from a Java package on the classpath.
+						For the Maven WAR-overlay packaging of the API-Console, such static web-resources go into the WAR file itself instead.
+						To avoid duplication in the sources, we copy the static web-resources at build-time.
+						-->
+						<id>prepare-war-overlay-resources</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/resources/com/sap/cloud/yaas/servicesdk/apiconsole/web/static</directory>
+								</resource>
+							</resources>
+							<outputDirectory>${project.build.directory}/${project.build.finalName}/api-console</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-licenses</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/resources/legal</directory>
+								</resource>
+							</resources>
+							<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<executions>
+					<execution>
+						<!--
+						Maven WAR-overlay packaging of the API-Console mostly contains static web-resources.
+						These are prepared in the api-console directory.
+						While a copy of them exists in a Java package on the classpath, we do not need to include that here.
+						Neither do we include the any legacy Java classes, or their library dependencies.
+						-->
+						<id>war-overlay-packaging</id>
+						<goals>
+							<goal>war</goal>
+						</goals>
+						<configuration>
+							<classifier>overlay</classifier>
+							<failOnMissingWebXml>false</failOnMissingWebXml>
+							<packagingIncludes>
+								license/**,
+								api-console/**,
+								WEB-INF/classes/META-INF/**,
+								WEB-INF/classes/**/ApiConsoleRedirectFilter.class,
+								WEB-INF/lib/slf4j-api-*.jar
+							</packagingIncludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>deploy-nexus</id>
+			<properties>
+				<metadata.source.directory>${project.parent.parent.basedir}/src/metadata</metadata.source.directory>
+				<metadata.artifactId>${project.parent.parent.artifactId}</metadata.artifactId>
+			</properties>
+		</profile>
+	</profiles>
+</project>

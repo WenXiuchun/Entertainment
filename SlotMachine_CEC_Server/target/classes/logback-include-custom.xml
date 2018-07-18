@@ -1,0 +1,3 @@
+<included>
+	<logger name="com.sap.cecmashup" level="DEBUG" />
+</included>

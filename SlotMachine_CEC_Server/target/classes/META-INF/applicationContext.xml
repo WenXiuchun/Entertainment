@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- include Service SDK libraries -->
+	<import resource="classpath:/META-INF/libraries-spring.xml"/>
+
+	<!-- include Service SDK API-Console helpers -->
+	<import resource="classpath*:/META-INF/api-console-spring.xml"/>
+
+	<!-- specify the component scan -->
+	<context:component-scan base-package="com.sap.cecmashup"/>
+
+	<!-- import placeholder values from property files and environment, see default.properties -->
+	<context:property-placeholder location="classpath:/default.properties,classpath*:test.properties"/>
+
+	<!-- take annotation-based configuration into account, when instantiating beans -->
+	<context:annotation-config/>
+	
+	
+	<!-- Setup for the default.properties configuration file; contains service 
+        URLs, file locations etc. -->
+    <bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:/default.properties</value>
+            </list>
+        </property>
+        <property name="searchSystemEnvironment" value="true" />
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="ignoreUnresolvablePlaceholders" value="false" />
+    </bean>
+	
+	<bean id="authorizedExecutionTemplateForPubsub" autowire-candidate="true"
+        class="com.sap.cloud.yaas.servicesdk.authorization.integration.AuthorizedExecutionTemplate">
+        <constructor-arg ref="accessTokenProviderForPubsub" />
+    </bean>
+    
+	<bean id="accessTokenProviderForPubsub"
+        class="com.sap.cloud.yaas.servicesdk.authorization.cache.SimpleCachingProviderWrapper">
+        <constructor-arg>
+            <bean
+                class="com.sap.cloud.yaas.servicesdk.authorization.protocol.ClientCredentialsGrantProvider">
+                <property name="tokenEndpointUri" value="https://api.yaas.io/hybris/oauth2/v1/token" />
+                <property name="clientId" value="${PUBSUB_CLIENT_ID}" />
+                <property name="clientSecret" value="${PUBSUB_CLIENT_SECRET}" />
+            </bean>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="authorizedExecutionTemplateForEngagement" autowire-candidate="true"
+        class="com.sap.cloud.yaas.servicesdk.authorization.integration.AuthorizedExecutionTemplate">
+        <constructor-arg ref="accessTokenProviderForEngagement" />
+    </bean>
+    
+	<bean id="accessTokenProviderForEngagement"
+        class="com.sap.cloud.yaas.servicesdk.authorization.cache.SimpleCachingProviderWrapper">
+        <constructor-arg>
+            <bean
+                class="com.sap.cloud.yaas.servicesdk.authorization.protocol.ClientCredentialsGrantProvider">
+                <property name="tokenEndpointUri" value="https://api.yaas.io/hybris/oauth2/v1/token" />
+                <property name="clientId" value="${ENGAGEMENT_CLIENT_ID}" />
+                <property name="clientSecret" value="${ENGAGEMENT_CLIENT_SECRET}" />
+            </bean>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="threadLoad" autowire-candidate="true" class="com.sap.cecmashup.util.ThreadLoad">
+	</bean>
+</beans>

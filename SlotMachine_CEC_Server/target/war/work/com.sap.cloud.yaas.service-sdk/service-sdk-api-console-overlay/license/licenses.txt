@@ -1,0 +1,11 @@
+
+===============================================
+Third Party Component                   License
+===============================================
+slf4j-api-1.7.21						SLF4J
+===============================================
+
+The Open Source components shipped with this product may themselves contain other Open Source components that may be made available under other Open Source licenses. Please check the corresponding information that is contained in the Open source archives.
+
+SLF4J
+(see full license text at ./licenses/slf4j-LICENSE.txt)

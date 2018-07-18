@@ -1,0 +1,7 @@
+com/sap/chatbot/api/generated/DefaultChatbotResource.class
+com/sap/chatbot/JerseyApplication.class
+com/sap/chatbot/api/generated/ChatbotResource.class
+com/sap/chatbot/HandleMessage.class
+com/sap/chatbot/api/generated/Sentence.class
+com/sap/chatbot/api/generated/ApiFeature.class
+com/sap/chatbot/HandleMessage$ImageInformation.class

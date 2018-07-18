@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SlotMachine_CEC_Server
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: i323932
+Implementation-Vendor-Id: com.sap.cecmashup
+Build-Time: Wed Jan 04 2017 07:01:977 UTC +0000
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://yaas.io/SlotMachine_CEC_Server
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: SAP SE
+

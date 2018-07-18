@@ -1,0 +1,80 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.com.sap.cec.innospace.test.ve",
+  "serialNumber" : "E5982H-I2",
+  "teamIdentifier" : "AA5SK3ZWE3",
+  "webServiceURL" : "https://example.com/passes/",
+  "appLaunchURL" : "vegasTest://",
+  "associatedStoreIdentifiers" : [284882215],
+  "authenticationToken" : "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc",
+  "barcode" : {
+    "message" : "wenxiuchun@gmail.com;xiuchun",
+    "format" : "PKBarcodeFormatQR",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "beacons" : [
+    {
+      "major" : 20368,
+      "minor" : 20119,
+      "proximityUUID" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+      "relevantText" : "A game awaits you xiuchun! Find us on the 2ndfloor "
+    }
+  ],
+  "organizationName" : "Casino Riviera Inc.",
+  "description" : "1x Free to play coupon",
+  "logoText" : "Casino Riviera Inc.",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "backgroundColor" : "rgb(130, 191, 232)",
+  "coupon" : {
+    "primaryFields" : [
+   	{
+        "key" : "offer",
+        "label" : "Slot Machine of your choice",
+        "value" : "Free Play"
+      }
+
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "link",
+        "value": "A game awaits you xiuchun! Find us on the 2nd floor"
+      }
+
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "expires",
+        "label" : "EXPIRES",
+        "value" : "2017-04-24T10:00-05:00",
+        "isRelative" : true,
+        "dateStyle" : "PKDateStyleShort"
+      }
+
+
+    ],
+    "backFields" : [
+        {
+            "key" : "frequent-flier-number",
+            "label" : "Device ID",
+            "value" : "1234-5678"
+        },
+        {
+            "key" : "website",
+            "label" : "Track my checked bags",
+            "dataDetectorTypes":["PKDataDetectorTypeLink"],
+            "value" : "vegasTest://"
+        },
+        {
+            "key" : "customer-service",
+            "label" : "Customer service",
+        "attributedValue": "<a href='vegasTest://'>start to play</a>",            
+            "value" : "(800) 555-0199"
+        },
+        {
+            "key" : "terms",
+            "label" : "Terms and Conditions",
+            "value" : "O Fortuna velut luna statu variabilis, semper crescis aut decrescis; vita detestabilis nunc obdurat et tunc curat ludo mentis aciem, egestatem, potestatem dissolvit ut glaciem.\n\n Sors immanis et inanis, rota tu volubilis, status malus, vana salus semper dissolubilis, obumbrata et velata michi quoque niteris; nunc per ludum dorsum nudum fero tui sceleris.\n\n Sors salutis et virtutis michi nunc contraria, est affectus et defectus semper in angaria.  Hac in hora sine mora corde pulsum tangite; quod per sortem sternit fortem, mecum omnes plangite!"
+        }
+    ]
+  }
+}

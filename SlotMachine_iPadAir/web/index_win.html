@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>CEC Innovation Lab Slot Machine</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+
+		<link rel="stylesheet" href="dist/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style_diamond.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="dist/jquery.slotmachine.css" type="text/css" media="screen" />
+
+		<script type="text/javascript" src="dist/jquery-2.1.1.min.js"></script>
+		<script src="dist/bootstrap.min.js"></script>
+		<script type="text/javascript" src="dist/jquery.slotmachine.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="randomize">
+			<div class="content container" style="text-align: center;padding:0px">
+			<br><br>
+				<div class="row">
+					<div class="col-xs-3" style="padding-left:0px">
+						<img src="img/Diamond_blue.png" style="margin-left:30px;width:130px">
+					</div>
+					<div class="col-xs-6" style="padding-left:0px;padding-right:0px">
+						<h1 id="userlabel">Welcome</h1>
+					</div>
+					<div class="col-xs-3" style="padding-left:0px">
+						<div><img src="img/Diamond_blue.png" style="width:130px"></div>
+					</div>
+				</div>
+				<h2 id="headertext">your game is on</h2>
+
+				<div class="row">
+					<div class="col-xs-4" style="padding-left:0px;padding-right:0px">
+						<div>
+							<div id="machine1" class="randomizeMachine">
+								<div><img src="img/Bar_gold.png" /></div>
+								<div><img src="img/Cherries_blue.png" /></div>
+								<div><img src="img/Chip_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+								<div><img src="img/Dice_gold.png" /></div>
+								<div><img src="img/Hybris_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-4" style="padding-left:0px;padding-right:0px">
+						<div>
+							<div id="machine2" class="randomizeMachine">
+								<div><img src="img/Bar_gold.png" /></div>
+								<div><img src="img/Cherries_blue.png" /></div>
+								<div><img src="img/Chip_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+								<div><img src="img/Dice_gold.png" /></div>
+								<div><img src="img/Hybris_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-4" style="padding-left:0px;padding-right:0px">
+						<div>
+							<div id="machine3" class="randomizeMachine">
+								<div><img src="img/Bar_gold.png" /></div>
+								<div><img src="img/Cherries_blue.png" /></div>
+								<div><img src="img/Chip_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+								<div><img src="img/Dice_gold.png" /></div>
+								<div><img src="img/Hybris_blue.png" /></div>
+								<div><img src="img/Diamond_blue.png" /></div>
+							</div>
+						</div>
+						<!--<div id="machine1Result" class="col-xs-4 machineResult">Index: 0</div>
+						<div id="machine2Result" class="col-xs-4 machineResult">Index: 1</div>
+						<div id="machine3Result" class="col-xs-4 machineResult">Index: 2</div>-->
+					</div>
+				</div>
+
+				<div>
+					<div class="btn-group btn-group-justified btn-group-randomize" role="group">
+						<div id="randomizeButton" type="button" class="btn btn-danger btn-lg">Shuffle</div>
+						<div id="winButton" type="button" class="btn btn-danger btn-lg">Win</div>
+						<div id="nearMissButton" type="button" class="btn btn-danger btn-lg">Near Miss</div>
+						<div id="looseButton" type="button" class="btn btn-danger btn-lg">Loose</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+
+				$.urlParam = function(name){
+					var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+					return results[1] || 0;
+				}				
+
+				// initialize Slot Machines
+				var machine1 = $("#machine1").slotMachine({
+					active	: 0,
+					delay	: 500
+				});
+
+				var machine2 = $("#machine2").slotMachine({
+					active	: 1,
+					delay	: 500,
+					direction: 'down'
+				});
+
+				var machine3 = $("#machine3").slotMachine({
+					active	: 2,
+					delay	: 500
+				});
+
+
+				// parse URL 
+				$("#userlabel").text(""+$.urlParam('user'));
+
+
+				// parse URL for game result
+				switch($.urlParam('game')){
+					case 'win':
+						startWinGame();
+						break;
+					case 'lose':
+						startLoseGame();
+						break;
+					case 'shuffle':
+						startShuffeGame();	
+						break;
+					case 'nearmiss':
+						startNearMissGame();
+						break;
+				}
+
+				function onComplete(active){
+					console.log("... "+this.element[0].id);
+					switch(this.element[0].id){
+						case 'machine1':
+							$("#machine1Result").text("Index: "+this.active);
+							break;
+						case 'machine2':
+							$("#machine2Result").text("Index: "+this.active);
+							break;
+						case 'machine3':
+							$("#machine3Result").text("Index: "+this.active);
+							break;
+					}
+				}
+
+				function startWinGame(){
+
+					var luckynumber = 1 + Math.floor(Math.random() * 6);
+					console.log(luckynumber);
+
+					machine1.setRandomize(function(){
+						return luckynumber;
+					});	
+
+					machine2.setRandomize(function(){
+						return luckynumber;
+					});	
+
+					machine3.setRandomize(function(){
+						return luckynumber;
+					});	
+
+					machine1.shuffle(5, onComplete);
+
+					setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					}, 500);
+
+					setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					}, 1000);
+
+					setTimeout(function(){
+						$("#headertext").text("Winner!");
+					}, 4600);					
+
+				}
+
+
+				function startNearMissGame(){
+
+					$("#headertext").text("your game is on");
+					var luckynumber = 1 + Math.floor(Math.random() * 5);
+					console.log(luckynumber);
+
+					machine1.setRandomize(function(){
+						return luckynumber;
+					});	
+
+					machine2.setRandomize(function(){
+						return luckynumber;
+					});	
+
+					machine3.setRandomize(function(){
+						return luckynumber + 1;
+					});	
+
+					machine1.shuffle(5, onComplete);
+
+					setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					}, 500);
+
+					setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					}, 1000);
+
+					setTimeout(function(){
+						$("#headertext").text("almost!");
+					}, 4600);
+				}
+
+
+				function startLoseGame(){
+					$("#headertext").text("your game is on");
+					var luckynumbera = 1 + Math.floor(Math.random() * 3);
+					var luckynumberb = 1 + Math.floor(Math.random() * 4);
+					var luckynumberc = 1 + Math.floor(Math.random() * 5);
+
+					var luckynumber1 = luckynumbera;
+					var luckynumber2 = luckynumberb;
+					var luckynumber3 = luckynumberc;
+
+
+					if(luckynumbera == luckynumberb){
+						luckynumber2 = luckynumberc;
+					}
+
+					if(luckynumberc == luckynumberb){
+						luckynumber3 = luckynumberc - 1;
+					}
+
+					if(luckynumberc == luckynumbera){
+						luckynumber1 = luckynumberb - 1;
+					}					
+
+					console.log(luckynumbera + " " + luckynumberb + " " + luckynumberc);
+					console.log(luckynumber1 + " " + luckynumber2 + " " + luckynumber3);
+					
+
+					machine1.setRandomize(function(){
+						return luckynumber1
+					});	
+
+					machine2.setRandomize(function(){
+						return luckynumber2;
+					});	
+
+					machine3.setRandomize(function(){
+						return luckynumber3;
+					});
+
+					machine1.shuffle(5, onComplete);
+
+					setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					}, 500);
+
+					setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					}, 1000);
+
+					setTimeout(function(){
+						$("#headertext").text("no luck this time!");
+					}, 4600);
+
+				}
+
+				function startShuffeGame(){
+
+					var shuffletext = new Array(
+					  "Everyone wins", "play with me", "Challenge yourself"
+					);
+
+					var intRandom = 1 + Math.floor(Math.random() * 2);
+
+					$("#headertext").text(shuffletext[intRandom]);
+                    $("#userlabel").text(""+$.urlParam('user'));
+
+					machine1.setRandomize(function(){
+						return 1 + Math.floor(Math.random() * 6);
+					});						
+
+					machine2.setRandomize(function(){
+						return 1 + Math.floor(Math.random() * 6);
+					});	
+
+					machine3.setRandomize(function(){
+						return 1 + Math.floor(Math.random() * 6);
+					});	
+
+					machine1.shuffle(5, onComplete);					
+
+					setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					}, 500);
+
+					setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					}, 1000);
+
+
+					setTimeout(startShuffeGame, 5000);
+				}
+
+
+				$("#randomizeButton").click(function(){
+					startShuffeGame();
+				})
+
+				$("#winButton").click(function(){
+					startWinGame();
+				})
+
+				$("#nearMissButton").click(function(){
+					startNearMissGame();
+				})				
+
+				$("#looseButton").click(function(){
+					startLoseGame();
+				})
+
+
+			});
+		</script>
+
+
+
+	</body>
+</html>

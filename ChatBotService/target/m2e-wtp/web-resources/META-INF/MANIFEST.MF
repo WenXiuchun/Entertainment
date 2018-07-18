@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: chatbot
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: i323932
+Implementation-Vendor-Id: com.sap.chatbot
+Build-Time: Wed Sep 14 2016 03:09:471 UTC +0000
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://yaas.io/chatbot
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: SAP SE
+
